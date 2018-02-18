@@ -1,10 +1,10 @@
 {
-  "name": "mean-book-listing-impr",
+  "name": "book-listing-mean",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng build && node ./bin/www",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,8 +21,19 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "angular-font-awesome": "^3.1.2",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.0.6",
+    "morgan": "^1.9.0",
     "rxjs": "^5.5.6",
+    "serve-favicon": "^2.4.5",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
