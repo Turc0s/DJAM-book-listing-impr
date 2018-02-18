@@ -48,16 +48,25 @@ export class BookCreateComponent implements OnInit {
 
   saveBook(form: NgForm) {
 
-    this._bookControlService.addNewBook()
+    const newBook = {
+      isbn: this._bookControlService.newBook.isbn,
+      title: this._bookControlService.newBook.title,
+      author: this._bookControlService.newBook.author,
+      description: this._bookControlService.newBook.description,
+      published_year: this._bookControlService.newBook.published_year,
+      publisher: this._bookControlService.newBook.publisher
+    }
+
+    this._bookControlService.addNewBook(newBook)
       .subscribe(res => {
-        console.log(res);
+          form.reset();
           let id = res['_id'];
           this.router.navigate(['/book-details', id]);
         }, (err) => {
           console.log(err);
         }
       );
-      form.reset();
+      
   }  
 
   // saveBook() {

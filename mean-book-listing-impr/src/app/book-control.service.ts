@@ -10,7 +10,7 @@ export class BookControlService {
 
   bookList: Book[];
   // book:Book;
-  // newBook: Book = new Book();
+  newBook: Book = new Book();
   // book: Book;
   // books:any;
   book:any = {};
@@ -26,8 +26,8 @@ export class BookControlService {
     return this.httpClient.get("/book/"+id);
   }
 
-  addNewBook() {
-    return this.httpClient.post("/book", this.book);
+  addNewBook(newBook) {
+    return this.httpClient.post("/book", newBook);
   }
 
   updateBook(id: any) {

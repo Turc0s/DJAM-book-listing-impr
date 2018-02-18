@@ -40,23 +40,23 @@
       <form (ngSubmit)="saveBook(bookForm)" #bookForm="ngForm">
         <div class="form-group">
           <label for="name">ISBN</label>
-          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.isbn" name="isbn" required>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.newBook.isbn" name="isbn" required>
         </div>
         <div class="form-group">
           <label for="name">Title</label>
-          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.title" name="title" required>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.newBook.title" name="title" required>
         </div>
         <div class="form-group">
           <label for="name">Author</label>
-          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.author" name="author" required>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.newBook.author" name="author" required>
         </div>
         <div class="form-group">
           <label for="name">Published Year</label>
-          <input type="number" class="form-control" [(ngModel)]="_bookControlService.book.published_year" name="published_year" required>
+          <input type="number" class="form-control" [(ngModel)]="_bookControlService.newBook.published_year" name="published_year" required>
         </div>
         <div class="form-group">
           <label for="name">Publisher</label>
-          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.publisher" name="publisher" required>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.newBook.publisher" name="publisher" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Save</button>
