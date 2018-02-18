@@ -1,0 +1,49 @@
+
+<!-- <div class="container">
+  <h2>Book Details</h2>
+  <hr>
+  <h1>{{ _bookControlService.book.title }}</h1>
+  <dl class="list">
+    <dt>ISBN</dt>
+    <dd>{{ _bookControlService.book.isbn }}</dd>
+    <dt>Author</dt>
+    <dd>{{ _bookControlService.book.author }}</dd>
+    <dt>Publish Year</dt>
+    <dd>{{ _bookControlService.book.published_year }}</dd>
+    <dt>Publisher</dt>
+    <dd>{{ _bookControlService.book.publisher }}</dd>
+    <dt>Update Date</dt>
+    <dd>{{ _bookControlService.book.updated_date | date:'short' }}</dd>
+  </dl>
+
+  <div class="row">
+      <div class="col-md-12">
+        <a [routerLink]="['/book-edit', _bookControlService.book._id]" class="btn btn-success">EDIT</a>
+        <button class="btn btn-danger" type="button" (click)="deleteBook(_bookControlService.book._id)">DELETE</button>
+        <button class="btn btn-default" type="button" routerLink="/books" >BACK</button>
+      </div>
+    </div>
+</div> -->
+
+<div class="container">
+  <h1>{{ book.title }}</h1>
+  <dl class="list">
+    <dt>ISBN</dt>
+    <dd>{{ book.isbn }}</dd>
+    <dt>Author</dt>
+    <dd>{{ book.author }}</dd>
+    <dt>Publish Year</dt>
+    <dd>{{ book.published_year }}</dd>
+    <dt>Publisher</dt>
+    <dd>{{ book.publisher }}</dd>
+    <dt>Update Date</dt>
+    <dd>{{ book.updated_date | date:'short' }}</dd>
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/book-edit', book._id]" class="btn btn-success">EDIT</a>
+      <button class="btn btn-danger" type="button" (click)="deleteBook(book._id)">DELETE</button>
+      <button class="btn btn-default" type="button" routerLink="/books">BACK</button>
+    </div>
+  </div>
+</div>

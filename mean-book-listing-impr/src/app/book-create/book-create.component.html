@@ -1,0 +1,69 @@
+
+<!-- <div class="container">
+  <h1>Add New Book</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveBook()" #bookForm="ngForm">
+        <div class="form-group">
+          <label for="name">ISBN</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.isbn" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Author</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Published Year</label>
+          <input type="number" class="form-control" [(ngModel)]="_bookControlService.book.published_year" name="published_year" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Publisher</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Save</button>
+          <button type="button" class="btn btn-default" routerLink="/books">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <h1>Add New Book</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveBook(bookForm)" #bookForm="ngForm">
+        <div class="form-group">
+          <label for="name">ISBN</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.isbn" name="isbn" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Author</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.author" name="author" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Published Year</label>
+          <input type="number" class="form-control" [(ngModel)]="_bookControlService.book.published_year" name="published_year" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Publisher</label>
+          <input type="text" class="form-control" [(ngModel)]="_bookControlService.book.publisher" name="publisher" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Save</button>
+          <button type="button" class="btn btn-default" routerLink="/books">Back</button>
+          <button type="button" class="btn btn-warning" (click)="onReset(bookForm)">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
