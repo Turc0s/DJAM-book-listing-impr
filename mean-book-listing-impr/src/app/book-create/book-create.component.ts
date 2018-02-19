@@ -14,38 +14,14 @@ import { Book } from '../book.model';
 })
 export class BookCreateComponent implements OnInit {
 
-  // book = {};
-
   constructor(private router: Router,
               private _bookControlService: BookControlService,
               private http: HttpClient) { }
 
   ngOnInit() {
-    if(this._bookControlService.isNewForm) {
-      console.log("Change state in nginit");
-      this._bookControlService.isNewForm = false;
-      console.log("the state: " + this._bookControlService.isNewForm);
-    }
-    // this.clearForm();    
+  
   }
-
-  onReset(form: NgForm) {
-    form.reset();
-  }
-
-  clearForm(){
-    this._bookControlService.book = {
-      _id: "",
-      isbn: "",
-      title: "",
-      author: "",
-      description: "",
-      published_year: "",
-      publisher: "",
-      updated_date: ""
-    }
-  }
-
+  
   saveBook(form: NgForm) {
 
     const newBook = {
@@ -68,16 +44,5 @@ export class BookCreateComponent implements OnInit {
       );
       
   }  
-
-  // saveBook() {
-  //   this.http.post('/book', this.book)
-  //     .subscribe(res => {
-  //         let id = res['_id'];
-  //         this.router.navigate(['/book-details', id]);
-  //       }, (err) => {
-  //         console.log(err);
-  //       }
-  //     );
-  // } // ORIGINAL
 
 }

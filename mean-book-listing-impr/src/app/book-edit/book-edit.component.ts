@@ -38,31 +38,4 @@ export class BookEditComponent implements OnInit {
       );
   }
 
-  // book: any = {};
-
-  // constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
-
-  // ngOnInit() {
-  //   console.log("nginit book-edit getBook");
-  //   this.getBook(this.route.snapshot.params['id']);
-  // }
-
-  // getBook(id) {
-  //   this.http.get('/book/'+id).subscribe(data => {
-  //     this.book = data;
-  //   });
-  // }
-
-  // updateBook(id) {
-  //   this.book.updated_date = Date.now();
-  //   this.http.put('/book/'+id, this.book)
-  //     .subscribe(res => {
-  //         let id = res['_id'];
-  //         this.router.navigate(['/book-details', id]);
-  //       }, (err) => {
-  //         console.log(err);
-  //       }
-  //     );
-  // }
-
 }

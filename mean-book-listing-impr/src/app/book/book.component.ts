@@ -16,11 +16,5 @@ export class BookComponent implements OnInit {
   ngOnInit() {
     this._bookcontrolService.showAllBooks();
   }
-  
-  changeState() {
-    console.log("change state called");
-    this._bookcontrolService.isNewForm = true;
-    console.log("state: " + this._bookcontrolService.isNewForm);
-  }
 
 }

@@ -40,30 +40,4 @@ export class BookDetailsComponent implements OnInit {
       console.log("Book deleted: " + id);
   }
 
-  // book = {};
-
-  // constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { }
-
-  // ngOnInit() {
-  //   console.log("in ngOnInit book-detail. getBookDetail()");
-  //   this.getBookDetail(this.route.snapshot.params['id']);
-  // }
-
-  // getBookDetail(id) {
-  //   this.http.get('/book/'+id).subscribe(data => {
-  //     this.book = data;
-  //   });
-  //   console.log("getBookDetail(): " + id)
-  // }
-
-  // deleteBook(id) {
-  //   this.http.delete('/book/'+id)
-  //     .subscribe(res => {
-  //         this.router.navigate(['/books']);
-  //       }, (err) => {
-  //         console.log(err);
-  //       }
-  //     );
-  // }
-
 }

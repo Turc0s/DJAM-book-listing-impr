@@ -13,13 +13,10 @@ const book = require("./routes/route");
 
 // connect to mongodb
 mongoose.connect("mongodb://localhost/mean-angular5-DJAM");
-// mongodb://localhost/mean-angular5-DJAM
-
-mongodb://localhost:23100/booklisting-db
 
 // on connection
 mongoose.connection.on("connected", () => {
-    console.log("Connected to database mongodb @ 23100");
+    console.log("Connected to database mongodb @ 27017 (default)");
 });
 
 // on error (mongodb)
@@ -37,19 +34,14 @@ app.use(cors());
 
 // body-parser
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({'extended':'false'}));
 
 // static files
-// app.use(express.static(path.join(__dirname, "dist")));
-// app.use('/books', express.static(path.join(__dirname, 'dist')));
-
-// app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/books', express.static(path.join(__dirname, 'dist')));
 app.use('/book', book);
 
 // routes 
-// app.use("/api", route);
 app.use("/book", book);
 
 // testing server

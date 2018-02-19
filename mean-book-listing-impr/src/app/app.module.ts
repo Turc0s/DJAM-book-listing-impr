@@ -56,7 +56,3 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-// ,
-//       { enableTracing: true } // <-- debugging purposes only
-

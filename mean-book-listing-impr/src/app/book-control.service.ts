@@ -9,12 +9,8 @@ import "rxjs/Rx";
 export class BookControlService {
 
   bookList: Book[];
-  // book:Book;
   newBook: Book = new Book();
-  // book: Book;
-  // books:any;
   book:any = {};
-  isNewForm: boolean = false;
 
   constructor(private httpClient: HttpClient) { }
 
